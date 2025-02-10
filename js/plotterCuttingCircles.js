@@ -1,13 +1,37 @@
 'use strict';
 
+const horizontal = document.querySelector(".horizontal");
+const vertical = document.querySelector(".vertical");
+const diameter = document.querySelector(".diameter");
+const undercut = document.querySelector(".undercut");
+const button = document.querySelector(".button");
+const result = document.querySelector(".result");
+
+button.addEventListener("click", (e) => {
+    e.preventDefault();   
+    const diameterUndercut = parseInt(diameter.value, 10) + parseInt(undercut.value, 10);
+    console.log(diameterUndercut)
+    const rezaltCircles = plotterCuttingCircles(
+        horizontal.value, vertical.value, diameterUndercut,);
+
+    const keys = Object.keys(rezaltCircles);
+    result.innerHTML = rezaltCircles[keys[0]] + " шт, " + keys[0].toLowerCase();
+    console.log(rezaltCircles)
+
+});
+
+
+
+
+
 // Всё в мм
-const horizontal = 450;
-const vertical = 320;
-const diameter = 168;
+// const horizontal = 450;
+// const vertical = 320;
+// const diameter = 168;
  
-console.log (
-    plotterCuttingCircles(horizontal, vertical, diameter)
-)
+// console.log (
+//     plotterCuttingCircles(horizontal, vertical, diameter)
+// )
 
 
 
@@ -44,7 +68,7 @@ function plotterCuttingCircles(horizontal, vertical, diameter){
     if (verticalTightPackaging <= verticalSimplePackaging) 
         return {"Простая упаковка": verticalSimplePackaging * horizontalSimplePackaging};
 
-    if (horizontalSimplePackaging * diameter + radius < horizontal) 
+    if (horizontalSimplePackaging * diameter + radius <= horizontal) 
         return {"Плотная упаковка": verticalTightPackaging * horizontalSimplePackaging};
 
     const horizontalTightPackagingEven  = horizontalSimplePackaging - 1; // Чётный ряд
