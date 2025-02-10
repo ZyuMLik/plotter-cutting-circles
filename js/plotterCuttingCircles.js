@@ -4,7 +4,7 @@ const horizontal = document.querySelector(".horizontal");
 const vertical = document.querySelector(".vertical");
 const diameter = document.querySelector(".diameter");
 const undercut = document.querySelector(".undercut");
-const button = document.querySelector(".button");
+const button = document.querySelector(".btn");
 const result = document.querySelector(".result");
 
 button.addEventListener("click", (e) => {
