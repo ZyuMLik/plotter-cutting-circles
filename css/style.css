@@ -1,51 +1,78 @@
-input[type=number]{
-    max-width:70px;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin:8px 0;
-    outline:none;
-    padding:8px;
-    box-sizing:border-box;
-    transition:.3s;
-  }
-  
-  input[type=number]:focus{
-    border-color:dodgerBlue;
-    box-shadow:0 0 8px 0 dodgerBlue;
-  }
+/* Общие стили для формы */
+form {
+	max-width: 300px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-family: Arial, sans-serif;
+}
 
-  .btn {
-	display: inline-block;	
-	box-sizing: border-box;
-	padding: 0 20px;
-	margin: 0 15px 15px 0;
-	outline: none;
-	border: none;  
-	border-radius: 4px;
-	height: 32px;
-	line-height: 32px;
+/* Стили для меток */
+label {
+	display: block;
+	margin-bottom: 15px;
 	font-size: 14px;
-	font-weight: 500;
-	text-decoration: none;
-	color: #fff;
-	background-color: #3775dd;
-	box-shadow: 0 2px #21487f;
+	color: #333;
+}
+
+/* Стили для текста над полями ввода */
+.label-text {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 12px;
+	color: #666;
+}
+
+/* Стили для полей ввода */
+input {
+	padding: 8px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+/* Группировка horizontal и vertical в одну строку */
+.size-fields {
+	display: flex;
+	align-items: center;
+	gap: 5px; /* Расстояние между элементами */
+}
+
+/* Группировка diameter и undercut в одну строку */
+.diameter-undercut-fields {
+	display: flex;
+	align-items: center;
+	gap: 10px; /* Расстояние между элементами */
+}
+
+/* Стили для кнопки */
+button {
+	padding: 10px;
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	border-radius: 5px;
 	cursor: pointer;
-	user-select: none;
-	appearance: none;
-	touch-action: manipulation;  
-	vertical-align: top;
+	font-size: 14px;
+	width: calc(100% - 10px); /* Ширина как у полей horizontal и vertical */
+	max-width: 150px; /* Ограничение ширины */
+	margin-top: 10px;
 }
-.btn:hover {
-	background-color: #002fed;
+
+button:hover {
+	background-color: #0056b3;
 }
-.btn:active {
-	background-color: #2f599e !important;
-}
-.btn:focus-visible {
-	box-shadow: 0 0 0 3px lightskyblue;
-}
-.btn:disabled {
-	background-color: #6c87b5;
-	pointer-events: none;
+
+/* Стили для блока результата */
+.result {
+	max-width: 300px;
+	margin: 20px auto 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	font-size: 14px;
+	text-align: center;
 }

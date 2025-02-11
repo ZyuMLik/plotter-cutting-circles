@@ -9,19 +9,37 @@
 </head>
 <body>
 
-    <h3>Калькулятор резки кругов на плоттере</h3>
     
-    <br>
-    <br>
-    <br>
-
+    
     <form action="">
-        Размер листа <br>
-        <input class="horizontal" type="number" value="320"> х <input class="vertical" type="number" value="450">мм <br>
-        Диаметр <input class="diameter" type="number" value="20">мм <br>
-        на подрез <input class="undercut" type="number" value="1">мм <br>
-        <button class="btn">посчитать</button>
+        <h3>Калькулятор резки кругов на плоттере</h3>
+        <!-- Поле "Размер листа" -->
+        <label>
+            <span class="label-text">Размер листа (мм)</span>
+            <div class="size-fields">
+                <input class="horizontal" type="number" name="horizontal" value="320" min="100" max="320">
+                <span>х</span>
+                <input class="vertical" type="number" name="vertical" value="450" min="100" max="450">
+            </div>
+        </label>
+
+        <!-- Поля "Диаметр" и "На подрез" -->
+        <div class="diameter-undercut-fields">
+            <label>
+                <span class="label-text">Диаметр (мм)</span>
+                <input class="diameter" type="number" name="diameter" value="20" min="1" max="1000">
+            </label>
+            <label>
+                <span class="label-text">На подрез (мм)</span>
+                <input class="undercut" type="number" name="undercut" value="2" min="0" max="10">
+            </label>
+        </div>
+
+        <!-- Кнопка -->
+        <button class="btn" type="button">Посчитать</button>
     </form>
+
+    <!-- Блок для вывода результата -->
     <div class="result"></div>
     
 </body>
