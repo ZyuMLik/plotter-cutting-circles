@@ -1,6 +1,28 @@
+
+h3 {
+	text-align: center;
+	min-width: 300px;
+	max-width: 1000px;
+	padding: 20px auto;
+
+}
+
+/* Контейнер для форм */
+.forms-container {
+	display: flex;
+	flex-wrap: wrap; /* Формы будут переноситься на новую строку, если не хватает места */
+	gap: 20px; /* Расстояние между формами */
+	justify-content: center; /* Центрирование форм */
+	padding: 20px;
+	min-width: 300px;
+	max-width: 1000px;
+}
+
+
 /* Общие стили для формы */
 form {
-	max-width: 300px;
+	width: 220px;
+	
 	margin: 0 auto;
 	padding: 20px;
 	border: 1px solid #ccc;
@@ -28,9 +50,11 @@ label {
 input {
 	padding: 8px;
 	font-size: 14px;
-	border: 1px solid #ccc;
+	border: 1px solid #75b6f3;	
 	border-radius: 5px;
 	box-sizing: border-box;
+	outline-color: #007BFF;
+	width: 100px;
 }
 
 /* Группировка horizontal и vertical в одну строку */
@@ -44,8 +68,22 @@ input {
 .diameter-undercut-fields {
 	display: flex;
 	align-items: center;
-	gap: 10px; /* Расстояние между элементами */
+	gap: 15px; /* Расстояние между элементами */
 }
+
+/* Стили для выпадающего меню */
+select {
+	padding: 8px;
+	font-size: 14px;
+	border: 1px solid #75b6f3;
+	border-radius: 5px;
+	background-color: white;
+	outline-color: #007BFF;
+	width: 100%;
+	/* margin-right: 10px; */
+
+}
+
 
 /* Стили для кнопки */
 button {
@@ -56,8 +94,8 @@ button {
 	border-radius: 5px;
 	cursor: pointer;
 	font-size: 14px;
-	width: calc(100% - 10px); /* Ширина как у полей horizontal и vertical */
-	max-width: 150px; /* Ограничение ширины */
+	min-width: 100%; /* Ширина как у полей horizontal и vertical */
+
 	margin-top: 10px;
 }
 
@@ -67,7 +105,7 @@ button:hover {
 
 /* Стили для блока результата */
 .result {
-	max-width: 300px;
+	width: 195px;
 	margin: 20px auto 0;
 	padding: 10px;
 	border: 1px solid #ccc;

@@ -9,37 +9,153 @@
 </head>
 <body>
 
+    <h3>Калькулятор резки кругов на плоттере</h3>
+
+    <div class="forms-container">
+
+        <!-- Форома 1 -->
+        <form action="">
+        
+            <!-- Поле "Размер листа" -->
+            <label>
+                <span class="label-text">Размер листа (мм)</span>
+                <div class="size-fields">
+                    <input class="horizontal_list" type="number" name="horizontal_list" value="487" disabled >
+                    <span>х</span>
+                    <input class="vertical_list" type="number" name="vertical_list" value="324" disabled>
+                </div>
+            </label>
     
+            <!-- Поле "Размер реза" -->
+            <label>
+                <span class="label-text">Размер реза (мм)</span>
+                <div class="size-fields">
+                    <input class="horizontal" type="number" name="horizontal" value="449" min="100" max="449">
+                    <span>х</span>
+                    <input class="vertical" type="number" name="vertical" value="294" min="100" max="294">
+                </div>
+            </label>
     
-    <form action="">
-        <h3>Калькулятор резки кругов на плоттере</h3>
-        <!-- Поле "Размер листа" -->
-        <label>
-            <span class="label-text">Размер листа (мм)</span>
-            <div class="size-fields">
-                <input class="horizontal" type="number" name="horizontal" value="320" min="100" max="320">
-                <span>х</span>
-                <input class="vertical" type="number" name="vertical" value="450" min="100" max="450">
+            <!-- Поля "Диаметр" и "На подрез" -->
+            <div class="diameter-undercut-fields">
+                <label>
+                    <span class="label-text">Диаметр (мм)</span>
+                    <input class="diameter" type="number" name="diameter" value="20" min="1" max="500">
+                </label>
+                <label>
+                    <span class="label-text">На подрез (мм)</span>
+                    <input class="undercut" type="number" name="undercut" value="2" min="0" max="50">
+                </label>
             </div>
-        </label>
+    
+            <select>
+                <option value="autofeed">С автоподачей</option>
+                <option value="tablet">Планшетный</option>
+            </select>
+    
+            <!-- Кнопка -->
+            <button class="btn" type="submit">Посчитать</button>
+            <!-- Блок для вывода результата -->
+            <div class="result"></div>
+        </form>
 
-        <!-- Поля "Диаметр" и "На подрез" -->
-        <div class="diameter-undercut-fields">
-            <label>
-                <span class="label-text">Диаметр (мм)</span>
-                <input class="diameter" type="number" name="diameter" value="20" min="1" max="1000">
-            </label>
-            <label>
-                <span class="label-text">На подрез (мм)</span>
-                <input class="undercut" type="number" name="undercut" value="2" min="0" max="10">
-            </label>
-        </div>
 
-        <!-- Кнопка -->
-        <button class="btn" type="submit">Посчитать</button>
-        <!-- Блок для вывода результата -->
-        <div class="result"></div>
-    </form>
+        <!-- Форома 2 -->
+        <form action="">
+        
+            <!-- Поле "Размер листа" -->
+            <label>
+                <span class="label-text">Размер листа (мм)</span>
+                <div class="size-fields">
+                    <input class="horizontal_list" type="number" name="horizontal_list" value="470" disabled >
+                    <span>х</span>
+                    <input class="vertical_list" type="number" name="vertical_list" value="324" disabled>
+                </div>
+            </label>
+    
+            <!-- Поле "Размер реза" -->
+            <label>
+                <span class="label-text">Размер реза (мм)</span>
+                <div class="size-fields">
+                    <input class="horizontal" type="number" name="horizontal" value="449" min="100" max="449">
+                    <span>х</span>
+                    <input class="vertical" type="number" name="vertical" value="294" min="100" max="294">
+                </div>
+            </label>
+    
+            <!-- Поля "Диаметр" и "На подрез" -->
+            <div class="diameter-undercut-fields">
+                <label>
+                    <span class="label-text">Диаметр (мм)</span>
+                    <input class="diameter" type="number" name="diameter" value="20" min="1" max="500">
+                </label>
+                <label>
+                    <span class="label-text">На подрез (мм)</span>
+                    <input class="undercut" type="number" name="undercut" value="2" min="0" max="50">
+                </label>
+            </div>
+    
+            <select>
+                <option value="tablet">Планшетный</option>
+                <option value="autofeed">С автоподачей</option>
+            </select>
+    
+            <!-- Кнопка -->
+            <button class="btn" type="submit">Посчитать</button>
+            <!-- Блок для вывода результата -->
+            <div class="result"></div>
+        </form>
+        
+        
+        <!-- Форома 3 -->
+        <form action="">
+        
+            <!-- Поле "Размер листа" -->
+            <label>
+                <span class="label-text">Размер листа (мм)</span>
+                <div class="size-fields">
+                    <input class="horizontal_list" type="number" name="horizontal_list" value="450" disabled >
+                    <span>х</span>
+                    <input class="vertical_list" type="number" name="vertical_list" value="320" disabled>
+                </div>
+            </label>
+    
+            <!-- Поле "Размер реза" -->
+            <label>
+                <span class="label-text">Размер реза (мм)</span>
+                <div class="size-fields">
+                    <input class="horizontal" type="number" name="horizontal" value="449" min="100" max="449">
+                    <span>х</span>
+                    <input class="vertical" type="number" name="vertical" value="294" min="100" max="294">
+                </div>
+            </label>
+    
+            <!-- Поля "Диаметр" и "На подрез" -->
+            <div class="diameter-undercut-fields">
+                <label>
+                    <span class="label-text">Диаметр (мм)</span>
+                    <input class="diameter" type="number" name="diameter" value="20" min="1" max="500">
+                </label>
+                <label>
+                    <span class="label-text">На подрез (мм)</span>
+                    <input class="undercut" type="number" name="undercut" value="2" min="0" max="50">
+                </label>
+            </div>
+    
+            <select>
+                <option value="autofeed">С автоподачей</option>
+                <option value="tablet">Планшетный</option>                
+            </select>
+    
+            <!-- Кнопка -->
+            <button class="btn" type="submit">Посчитать</button>
+            <!-- Блок для вывода результата -->
+            <div class="result"></div>
+        </form>
+
+    </div>
+    
+    
 
     
     
